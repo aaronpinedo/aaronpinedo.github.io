@@ -1,64 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meu Site com Fotos e Música</title>
+    <style>
+        /* Fundo animado */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(-45deg, #ff6b6b, #f7d794, #1dd1a1, #48dbfb);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: #fff;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .audio-container {
+            margin-bottom: 20px;
+        }
+
+        /* Fotos */
+        .fotos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .fotos img {
+            width: 300px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .fotos img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Frases */
+        .frases {
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+    </style>
 </head>
-<style>
-    * {
-        padding: 0;
-        margin: 0;
-    }
-      .info {
-        background-color: #0f0f0f;
-        color: white;
-        text-align: center;
-      }
-
-      body{
-        background-color: aliceblue;
-      }
-
-      .conteudo {
-        background-color: #f0f0f0;
-        max-width: 728px;
-        border-radius: 8px;
-        margin: 50px 30px;
-        padding: 20px;
-      }
-
-      .conteudo h3 {
-        font-size: 28px;
-        text-align: center;
-      }
-
-      .conteudo > div {
-        margin-bottom: 50px;
-      }
-
-</style>
 <body>
-    <header class="info">
-        <h1>Aaron</h1>
-        <p>vou para a igreja todas as manhas</p>
-    </header>
-    <main class="conteudo">
-        <div>
-            <h3>Conhecimento:</h3>
-            <ul>
-                <li>tecnoligia</li>
-                <li>espanhol</li>
-                <li>roubo a mao armada</li>
-                <li>etc</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Experiencia:</h3>
-            <ul>
-                <li>garçom</li>
-            </ul>
-            <div>
-    </main>
+
+    <h1>Bem-vindo ao meu site</h1>
+
+    <!-- Música -->
+    <div class="audio-container">
+        <audio controls autoplay loop>
+            <source src="audio/musica.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio HTML5.
+        </audio>
+    </div>
+
+    <!-- Fotos -->
+    <div class="fotos">
+        <img src="images/foto1.jpg" alt="Foto 1">
+        <img src="images/foto2.jpg" alt="Foto 2">
+        <img src="images/foto3.jpg" alt="Foto 3">
+        <img src="images/foto4.jpg" alt="Foto 4">
+    </div>
+
+    <!-- Frases -->
+    <div class="frases">
+        <p>"A vida é feita de momentos únicos."</p>
+        <p>"Cada foto conta uma história."</p>
+        <p>"A música é a trilha sonora das nossas memórias."</p>
+    </div>
+
 </body>
 </html>
